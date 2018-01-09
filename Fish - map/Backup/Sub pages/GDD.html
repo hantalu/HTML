@@ -1,0 +1,379 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="../Css/Subpages.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Js/jquery-3.2.1.js"></script>
+
+<!--<img class="Img" src="../Imgs/Flow/[Mulan] Game Flow1.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>-->
+</head>
+
+<body>
+
+ 
+    <a href="GDD.html"><span id="tag-2-active"><div id="Game-logo-2"><img src="../Imgs/Game logo/Tazan-II-logo.png" /></div>Tazan II</span></a>
+   
+    <div class="hide-all-h3-content" onclick="Hideall();">HIDE<br /> ALL</div>
+
+
+<div class="wrapper" id="main">
+	
+    
+    <h2>Tazan II</h2>
+    <span class="content">
+    <h3 class="h3-show" onclick="Showh3content('0')">0. Main Game</h3>
+    <h3 class="h3-hide" onclick="Closeh3content('0')">0. Main Game</h3>
+    <div class="h3-content">
+    • <strong>1 Roulette Bet</strong>: = Line bet<br />
+    • <strong>Total bet</strong>: = Line bet + 4 x Roulette bet<br />
+	• <strong>Win point of Outer Roulette</strong>: Roulette bet x Roulette ODD<br />
+    • <strong>Win point of Inner Spin</strong>: Line bet x Spin ODD<br />
+    • <strong>Total win point</strong>: Roulette Win + Spin Win<br /> 
+    <h4>Spin ODD</h4>
+    <img class="Img" onclick="Zoom('0')" src="../Imgs/Game screen/TZ Spin 0.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+    <img class="Img" onclick="Zoom('1')" src="../Imgs/Game screen/TZ Spin 2.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+    • How to play?
+    	<ul>
+        	<li>After a spin round, player will get a Spin Win if there are 3 or 4 same symbols on the Inner Spin</li>
+            <li>Spin win = Line bet x Spin ODD</li>
+            <li>Just take a look at the example above, SPIN ODD of 3 Owls is 5, so the player win Spin Win = Line Bet (0.2) x Spin Odd (5) = 1</li>
+            <li>Spin Win works individually to the Outer Roulette, which means no matter the result of the Outer Roulette, Spin Win will be paid if there are 3 or more same symbols appear in the Inner Spin</li>
+        </ul>
+    <h4>Roulette ODD</h4>
+    <img class="Img" onclick="Zoom('2')" src="../Imgs/Game screen/TZ Spin 1.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+    <img class="Img" onclick="Zoom('3')" src="../Imgs/Game screen/TZ Spin 3.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+    • How to play?
+    	<ul>
+        	<li>After a spin round, player will get a Roulette Win if the Outer Roulette  stop at 1 same symbol at least to the symbol(s) in the Inner Spin</li>
+            <li>Roulette win = Roulette bet x Roulette ODD</li>
+            <li>Just take a look at the example above, ROULETTE ODD of Owl is x2, so the player win Roulette Win = Roulette Bet (0.2) x Roulette Odd (2) = 0.4</li>
+            <li>In the case there are more than 1 symbols matched in the Inner Spin, the Total Roulette Win will be the Total of ALL ROULETTE WIN (Sum up)</li>
+        </ul><br />
+        
+    <!--ANIM-->
+    <div class="Anim-note">
+    	<div class="Anim-note-button" onclick="Showanimnote('0')">Animation for Main Game</div>
+            <div class="Anim-note-wrapper">
+            	<div class="close-button" onclick="Closeanimnote('0')"><img src="../Imgs/Source Img/Close-button.png" /></div>
+                <div class="Anim-note-content">
+                	<h1>Animation for Main Game</h1>
+                    <h3>Idle animation</h3>
+                    	After opening the game, the Outer Roulette will be at the position where the game closed last time.<br />
+						For 1st time opening, Outer Roulette will be at Tazan symbol<br /> 
+                        <img class="gif" src="../Imgs/Game screen/Idle-Outer Roulette.gif" />
+                        Spin status will be "BET"<br />
+                        <img class="gif" src="../Imgs/Game screen/Idle-Spin status-Bet.gif" />
+                        While spining, Spin status will be "BET"<br />
+						After getting the result of Normal Spin, Spin Status will be changed to "EXTRA"<br />
+						<img class="gif" src="../Imgs/Game screen/Idle-Spin status-Extra.gif" />
+                    	In Extra spin, Spin status will be "Extra"<br />
+						After Extra spin, Spin status will be changed back to "Bet"<br />
+                   <h3>Result Step</h3>
+                   		Spin win and Roulette win have different animation<br />
+						For Spin Win<br />
+                        <img class="gif" src="../Imgs/Game screen/Spin win.gif" />
+                        For Roulette Win<br />
+						<img class="gif" src="../Imgs/Game screen/Roulette Win.gif" />
+						For Spin Win and Roulette Win at the same time<br />
+						<img class="gif" src="../Imgs/Game screen/Spin win + Roulette win.gif" />
+                   <h3>Animation of symbols</h3>
+                   		Owl<br />
+                        <img class="gif" src="../Imgs/Game screen/Owl.gif" />
+                        Monkey + Joker<br />
+                        <img class="gif" src="../Imgs/Game screen/Monkey + Joker.gif" />
+                        Sheep + Joker<br />
+                        <img class="gif" src="../Imgs/Game screen/Sheep + Joker.gif" />
+                        Tazan<br />
+                        <img class="gif" src="../Imgs/Game screen/Tazan.gif" />
+                        Tiger<br />
+                        <img class="gif" src="../Imgs/Game screen/Tiger.gif" />
+                        Wolf + Elephant<br />
+                        <img class="gif" src="../Imgs/Game screen/Wolf + elephant.gif" />
+                </div>
+            	</div>
+        	</div>
+    <!--ANIM-->
+    
+	</div>
+   
+    <h3 class="h3-show" onclick="Showh3content('1')">1. Extra Spin</h3>
+    <h3 class="h3-hide" onclick="Closeh3content('1')">1. Extra Spin</h3>
+     <div class="h3-content">
+	• After a spin, no matter the players get a Win or not, they can play the Extra Spin<br />
+	<img class="Img" onclick="Zoom('4')" src="../Imgs/Game screen/extra 2.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+    • With Extra Spin, player will pay an exact same amount of Total Bet like it was in the Normal Spin<br />
+	• The spin will start again like it was in the Normal Spin<br />
+    • With an Extra Spin, HOLD feature will be triggered<br />
+    • Extra spin CANNOT be played after a normal spin if Bet was changed<br />
+    
+    <!--ANIM-->
+    <div class="Anim-note">
+    	<div class="Anim-note-button" onclick="Showanimnote('1')">Animation for Extra Spin</div>
+            <div class="Anim-note-wrapper">
+            	<div class="close-button" onclick="Closeanimnote('1')"><img src="../Imgs/Source Img/Close-button.png" /></div>
+                <div class="Anim-note-content">
+                	<h1>Animation for Extra Spin</h1>
+                    <h3>Extra Spin and Win and not</h3>
+                    	In Extra Spin, Color of the Background of the Inner Spin will change to Blue<br />
+                    	Stopped Outer Roulette of Extra Spin will has different anim of the one in Normal spin<br />
+                        <img class="gif" src="../Imgs/Game screen/Extra spin + win.gif" />
+                        <img class="gif" src="../Imgs/Game screen/Extra spin + no win.gif" />
+                    <h3>Take after Extra Spin</h3>
+                    	After pressing TAKE button, 2 Outer Roulette of Normal Spin and Extra Spin will be remained until Spin button is pressed again<br />
+						When Spin button is pressed, the Outer Roulette will start and the position of Extra Spin's Outer Roulette<br />
+                </div>
+            	</div>
+        	</div>
+    <!--ANIM-->
+    
+    </div>
+   
+    <h3 class="h3-show" onclick="Showh3content('2')">2. HOLD in Extra Spin</h3>
+    <h3 class="h3-hide" onclick="Closeh3content('2')">2. HOLD in Extra Spin</h3>
+    <div class="h3-content">
+	• HOLD feature can only be trigger after a Normal Spin with some special conditions:
+   	
+            	<h4>Case 1: <strong>Nothing to HOLD</strong></h4>
+                <img class="Img" onclick="Zoom('5')" src="../Imgs/Game screen/extra 3.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+                HOLD will not be suggested in the case 4 symbols in the Inner Spin are diffrent to each other and also different to the Outer Roulette<br />
+
+                <h4>Case 2: <strong>Promissing Win in Extra Spin</strong></h4>
+                <img class="Img" onclick="Zoom('6')" src="../Imgs/Game screen/extra 1.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+            	Althought player didn't get any WIN in this round, he was suggested to HOLD 2 Tazan symbols<br />
+				Coz the Extra Spin can trigger BIG ROULETTE WIN (if the result of next Roulette is Tazan) or BIG SPIN WIN (if there are 1 Tazan symbol at least appear in the Inner Spin in the Extra Spin)<br />
+				So, HOLD will be suggested in these cases:
+                <ul>
+                	<li>Get Spin Win or Roulette Win</li>
+                    <li>There are 2 same symbols at least in the Inner Spin with the ODDS higher than WOLF (no matter the result of Outer Roulette)</li>
+                    <li>In the case there are 2 pairs of 2 same symbols in the Inner Spin, Hold Suggestion will goes to the pair that have HIGER ODD</li>
+                    <!--<li>In the case there are 2 pairs of 2 same symbols in the Inner Spin, Hold Suggestion will goes to ALL 4 symbols if the ODDs of them all are HIGHER THAN WOLF symbol</li>-->
+                    <li>There are 2 same Monkey symbols at least in the Inner Spin(no matter the result of Outer Roulette) and 2 other symbols are different from Monkey symbols and diffrent to each other</li>
+                    <li>Outer Roulette stops on the following symbols:</li>
+                    <img class="Img" onclick="Zoom('7')" src="../Imgs/Game screen/extra 5.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+                    <img class="Img-2" src="../Imgs/Game screen/extra 6.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+                </ul>
+                <h4>Case 3: <strong>Promissing Win in Extra Spin + Win in Normal spin</strong></h4>
+                In the case the normal spin has triggered Win already, a coin symbol will be added to Hold bar to let the players know that they have just gotten win point from these symbols<br />
+					<img class="Img-2" src="../Imgs/Game screen/extra 17.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+                
+  
+    </div>
+    
+    <h3 class="h3-show" onclick="Showh3content('3')">3. Extra Spotlight</h3>
+    <h3 class="h3-hide" onclick="Closeh3content('3')">3. Extra Spotlight</h3>
+    <div class="h3-content">
+	• When the Outer Roulette stops at 1 of these 2 symbols, Extra Spotlight will be triggered<br />
+	<img class="Img-2" src="../Imgs/Game screen/extra 7.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+    • 4 or 6 more Outer Roulette will be triggered and start running of the rest symbols to increase the chance to win<br />
+    <img class="Img" onclick="Zoom('8')" src="../Imgs/Game screen/extra 11.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+    • For x4 extra, next stopped symbols must be 2 or 4 symbols far form the previous one. (This distance can be added by 1 if there is Extra Spotlight symbol between 2 Extra symbols)<br />
+	• For x6 extra, next stopped symbols must be 1 or 3 symbols far form the previous one. (This distance can be added by 1 if there is Extra Spotlight symbol between 2 Extra symbols)<br />
+    • In Extra Spin after Extra Spotlight, the Outer roulette will start running from the Extra Spotlight symbols<br />
+	
+    
+    <!--ANIM-->
+    <div class="Anim-note">
+    	<div class="Anim-note-button" onclick="Showanimnote('2')">Animation for Extra Spotlight</div>
+            <div class="Anim-note-wrapper">
+            	<div class="close-button" onclick="Closeanimnote('2')"><img src="../Imgs/Source Img/Close-button.png" /></div>
+                <div class="Anim-note-content">
+                	<h1>Animation for Extra Spotlight</h1>
+                    <h3>Extra Spotlight</h3>
+                    	In Extra Spotlight, color of the background of the Inner spin will change to Orange<br />
+                        <img class="gif" src="../Imgs/Game screen/Extra spotlight.gif" />
+                   	<h3>Take after Extra Spotlight</h3>
+                    	After pressing Take button, all Outer Roulette of Extra Spin will be remain until Spin button is pressed<br />
+                        <img class="gif" src="../Imgs/Game screen/Extra spotlight.gif" />
+                </div>
+            	</div>
+        	</div>
+    <!--ANIM-->
+    
+    </div>
+    
+    <h3 class="h3-show" onclick="Showh3content('4')">4. Joker Award</h3>
+    <h3 class="h3-hide" onclick="Closeh3content('4')">4. Joker Award</h3>
+    <div class="h3-content">
+	• When the Outer Woulette stops at Joker symbol, player wil get 4 Roulette win of symbols in the Inner Spin no matter what they are<br />
+    <img class="Img-2" src="../Imgs/Game screen/extra 6.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+    <img class="Img" onclick="Zoom('9')" src="../Imgs/Game screen/extra 8.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+    • When the Inner Spin stop at Joker symbol, Joker symbol will change to the symbol that can trigger the biggest win availabled in the round<br />
+	<img class="Img" onclick="Zoom('10')" src="../Imgs/Game screen/extra 15.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+    • Just take a look at the images above, in this case, Joker can change to 1 of 3 symbols in the Inner Spin: Tiger - Tazan - Wolf and Monkey symbol in the Outer Roulette<br />
+	• Why did it change to Monkey symbol while the rest 3 symbols have HIGHER ODD in Both Roulette and Spin Win?<br />
+	• Coz Monkey symbol is the symbol that can trigger Win in this case, 2 symbols of other kinds cannot trigger anything<br />
+    
+    
+    
+    </div>
+    
+    <h3 class="h3-show" onclick="Showh3content('5')">5. Super Prize</h3>
+    <h3 class="h3-hide" onclick="Closeh3content('5')">5. Super Prize</h3>
+    <div class="h3-content">
+    Updating...<br />
+	• After a Spin round, Super Prize can be trigger by 1 and only 1 special case:
+    <img class="Img" onclick="Zoom('11')" src="../Imgs/Game screen/extra 4.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+    <!--• Tazan is the symbol has the HIGHEST ODD in both Roulette and Spin so 4 of it in the Inner Spin<br />
+	• In the normal spin, player can win a maximum Win = 4 Tazan in the Inner Spin + 1 Tazan in the Roulette
+    <ul>
+    	<li>Roulette Win = Tazan(Roulette ODD) x Roulette Bet x 4</li>
+        <li>Spin Win = Tazan(Spin ODD) x Line bet</li>
+    </ul>
+    • At this time, player can trigger Extra Win to win more point in ONLY ONE case - JOKER<br /> 
+	• Everything except JOKER in the Extra Spin will not bring any extra win<br />
+    • With Joker, 4 Tazan symbols will trigger Roulette Win ANOTHER time which will make the Total Win become:
+    <ul>
+    	<li>Roulette Win = Tazan(Roulette ODD) x Roulette Bet x 4</li>
+        <li>Spin Win = Tazan(Spin ODD) x Line bet</li>
+        <li>AND EXTRA WIN with JOKER: Tazan(Roulette ODD) x Roulette Bet x 4</li>
+    </ul>-->
+    </div>
+    
+    <h3 class="h3-show" onclick="Showh3content('6')">6. Complex Symbol</h3>
+    <h3 class="h3-hide" onclick="Closeh3content('6')">6. Complex Symbol</h3>
+    <div class="h3-content">
+	• By activating Complex Symbol feature, player can increase the chance to win more point<br />
+	• By inscreasing Bet, 4 symbols at the 4 corners of the game screen will changed to Complex Symbol<br />
+	• With Bet >= 10% of Max Bet, the symbol at the Uper left corner will changed to Complex.<br />
+	• With Bet >= 40% of Max Bet, 1 more symbol at the Uper right corner will changed to Complex.<br />
+    • With Bet >= 60% of Max Bet, last 2 symbol at the Lower left / right corner will changed to Complex.<br />
+    <img class="Img" onclick="Zoom('12')" src="../Imgs/Game screen/extra 9.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+    <img class="Img" onclick="Zoom('13')" src="../Imgs/Game screen/extra 10.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+    • Each Complex symbol is the combination of the 2 symbols which can help player to earn more win point. Once the Outer Roulette stops at a Complex symbol, all 2 symbols in the Complex combination are counted for Roulette Win or Spin Win if existed<br />
+    </ul>
+    </div>
+    
+    <h3 class="h3-show" onclick="Showh3content('7')">7. Bonus Game</h3>
+    <h3 class="h3-hide" onclick="Closeh3content('7')">7. Bonus Game</h3>
+    <div class="h3-content">
+	• Once the result of the Inner Spin has 3 Monkey Symbol at least (any position) and TOTAL BET is >= 20% MAX TOTAL BET, Bonus game can be triggered<br />
+    <img class="Img" onclick="Zoom('14')" src="../Imgs/Game screen/extra 12.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+    • The Bonus Counter will be stopped immediately and this is the Win point availabled for the Bonus game<br />
+	• After pressing Start button, Bonus Monkey Symbols in the game screen will be lighten up consecutively.<br /> 
+    <img class="Img" onclick="Zoom('15')" src="../Imgs/Game screen/extra 13.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+    • Player can press Stop button at anytime to stop the running light, in the case the light stops at the Big Monkey Symbol, player will win BONUS WIN POINT<br />
+	<img class="Img" onclick="Zoom('16')" src="../Imgs/Game screen/extra 14.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+    <h4>Bet more to win more bonus</h4>
+    • Once Total Bet >= 20% Max Total bet: Players can win 20% of Bonus Counter<br />
+	• Once Total Bet >= 40% Max Total bet: Players can win 40% of Bonus Counter<br />
+	• Once Total Bet >= 60% Max Total bet: Players can win 100% of Bonus Counter<br />
+    <h4>Bonus Counter</h4>
+    • Bonus Counter in server side will be randomly kept changing<br />
+    • Once entering the game, Bonus Counter will be randomly kept changing (value can be different from server, It doesn't matter but the random range must be the same) <br />
+	• The Counter will be stopped (get value from server) once the Spin round started<br />
+	• While waitting for Extra Spin, the Counter will be freezed<br />
+	• In the case players don't play Extra Spin and press Spin to start another spin round, the Bonus Counter will be updated to another value (get from server)<br />
+	• The Counter will be kept changing again once and only players press Take button to completely end a Spin Round<br />
+    </div>
+    
+    <h3 class="h3-show" onclick="Showh3content('8')">8. Reference Videos</h3>
+    <h3 class="h3-hide" onclick="Closeh3content('8')">8. Reference Videos</h3>
+    <div class="h3-content">
+	<table class="Table-videos">	
+        <tr>
+        	<th>Case</th>
+            <th>Link</th>
+            <th>Video's name</th>
+        </tr>
+        <tr>
+        	<td>Hold suggested and Extra Spin</td>
+            <td><span id="video-link">P:\Game Designer\GDD\Games of July\Tazan II\Videos</span><img class="copy-button" onclick="copyToClipboard(document.getElementById('video-link').innerHTML)" src="../Imgs/Source Img/P-CopyIcon_0.1.png" ></td>
+            <td>Tazan II.mp4 (0:25)</td>
+        </tr>
+        <tr>
+        	<td>Extra Spotlight</td>
+            <td><span id="video-link">P:\Game Designer\GDD\Games of July\Tazan II\Videos</span><img class="copy-button" onclick="copyToClipboard(document.getElementById('video-link').innerHTML)" src="../Imgs/Source Img/P-CopyIcon_0.1.png" ></td>
+            <td>Tazan II.mp4 (2:40)</td>
+        </tr>
+        <tr>
+        	<td>Joker Award - Outer Roulette</td>
+            <td><span id="video-link">P:\Game Designer\GDD\Games of July\Tazan II\Videos</span><img class="copy-button" onclick="copyToClipboard(document.getElementById('video-link').innerHTML)" src="../Imgs/Source Img/P-CopyIcon_0.1.png" ></td>
+            <td>Tazan II.mp4 (4:10)</td>
+        </tr>
+       	<tr>
+        	<td>Joker Award - Inner Spin</td>
+            <td><span id="video-link">P:\Game Designer\GDD\Games of July\Tazan II\Videos</span><img class="copy-button" onclick="copyToClipboard(document.getElementById('video-link').innerHTML)" src="../Imgs/Source Img/P-CopyIcon_0.1.png" ></td>
+            <td>Tazan II - 2.mp4 (0:05)</td>
+        </tr>
+        <tr>
+        	<td>Super Prize</td>
+            <td><span id="video-link">P:\Game Designer\GDD\Games of July\Tazan II\Videos</span><img class="copy-button" onclick="copyToClipboard(document.getElementById('video-link').innerHTML)" src="../Imgs/Source Img/P-CopyIcon_0.1.png" ></td>
+            <td>Tazan II.mp4 (5:50)</td>
+        </tr>
+        <tr>
+        	<td>Bonus Game - Demo</td>
+            <td><span id="video-link">P:\Game Designer\GDD\Games of July\Tazan II\Videos</span><img class="copy-button" onclick="copyToClipboard(document.getElementById('video-link').innerHTML)" src="../Imgs/Source Img/P-CopyIcon_0.1.png" ></td>
+            <td>Tazan II.mp4 (6:50)</td>
+        </tr>
+        <tr>
+        	<td>Bonus Game - Game play</td>
+            <td><span id="video-link">P:\Game Designer\GDD\Games of July\Tazan II\Videos</span><img class="copy-button" onclick="copyToClipboard(document.getElementById('video-link').innerHTML)" src="../Imgs/Source Img/P-CopyIcon_0.1.png" ></td>
+            <td>Bonus game.mp4</td>
+        </tr>
+    </table>
+    </div>
+    
+    <h3 class="h3-show" onclick="Showh3content('9')">9. New Info</h3>
+    <h3 class="h3-hide" onclick="Closeh3content('9')">9. New Info</h3>
+    <div class="h3-content">
+    • Old Info:
+    <img class="Img" onclick="Zoom('17')" src="../Imgs/Game screen/extra 18.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>
+	• Things to change:
+    <ul>
+    	<li>3 → Decrease Bet</li>
+        <li>4 → Increase Bet</li>
+        <li>5 → Max Bet</li>
+        <li>6 → Extra Spin</li>
+        <li>Everything else → don't change</li>
+    </ul>
+    </div>
+    
+    <h3 class="h3-show" onclick="Showh3content('10')">10. Buttons's Status</h3>
+    <h3 class="h3-hide" onclick="Closeh3content('10')">10. Buttons's Status</h3>
+    <div class="h3-content">
+    • 1st opening the game, all buttons at Bottom Bar will be enabled except Extra Button (4 HOLD options will not appear)<br />
+	• While spinning normaly, Bet - Max Bet - Extra Button will be disabled and Spin button will change to Stop button<br />
+	• After a normal spin, all buttons will be enabled (4 HOLD options will appear at disabled state and which one is suggested will be enabled)<br />
+	• In Extra Spin, all DISABLED HOLD OPTIONS will change to normal Hold option in disabled state (no coin icon)<br />
+	• After Extra Spins, Bet - Max bet - Extra button will be disabled and Spin Button will change to Take button in enabled state<br />
+	• After Extra Spins, all 4 HOLD OPTIONS remained the state like they were before the Extra Spin and can not be pressed anymore<br />
+	• After Extra Spins and win NOTHING, Main game will be reset and all 4 Hold Options will be turned off<br />
+    • BET and TAKE button will reset Main Game and whole 4 Hold Options (make them disappeared)<br />
+    • Spin button will turn off all 4 HOLD OPTIONS to start a new Normal Spin<br />
+    
+    </div>
+    
+    <h3 class="h3-show" onclick="Showh3content('11')">11. Balance Updated Rule</h3>
+    <h3 class="h3-hide" onclick="Closeh3content('11')">11. Balance Updated Rule</h3>
+    <div class="h3-content">
+    • Balance will only be updated once TAKE button is pressed<br />
+    • After a Normal Spin, Total Win (if existed) will be kept by server. If Game Client is ended at this moment, the Total Win will be kept in server until players re-log into the game and press TAKE button<br />
+	• For every Extra Spin, Total Win will be removed, the new result will be re-counted after Extra Spin (Which means the final result if the result of Extra Spin)<br />
+	• Players cannot withdraw the Total Win while they are waitting for Extra Spin<br />
+    • For a spin that trigger Bonus Game, Total Win will not be shown after the spin but after finishing playing Bonus Game<br />
+    </div>
+    
+    <h3 class="h3-show" onclick="Showh3content('12')">12. Replay Rule</h3>
+    <h3 class="h3-hide" onclick="Closeh3content('12')">12. Replay Rule</h3>
+    <div class="h3-content">
+    • After a normal spin, if players don't play the Extra spin yet, they will see the exact same game screen as before the game client was killed. Hold Suggestion must be shown kept too<br />
+    • In the case result of Normal spin was not shown yet and the game client was killed, the result will be shown after players re-log into the game and wait for Extra Spin + Hold Suggestion (if existed)<br />
+    • In the case result of Extra spin was not shown yet and the game client was killed, the result will be shown after players re-log into the game<br />
+	• While waitting for Extra Spin, if players turn off the Hold Suggestion, the Hold Suggestion must be re-shown after players re-log into the game<br />
+    
+    </div>
+    
+    
+    </span>
+</div>
+
+<script>
+
+Click();
+ClearViewer();
+
+</script>
+
+</body>
+</html>

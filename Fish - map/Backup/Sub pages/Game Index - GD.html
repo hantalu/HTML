@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="../Css/Subpages.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../Js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="../Js/script-cp.js"></script>
+
+<!--<img class="Img" src="../Imgs/Flow/[Mulan] Game Flow1.png" onerror="this.src='../Imgs/Source Img/fallback-img-2.png'"/>-->
+</head>
+
+
+<body>
+<!--TEMP - start-->
+    <div id="temp"></div>
+    <div id="temp-redo"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp"></div>
+    <div class="temp-redo"></div>
+    <div class="temp-redo"></div>
+    <div class="temp-redo"></div>
+    <div class="temp-redo"></div>
+    <div class="temp-redo"></div>
+    <div class="temp-redo"></div>
+    <div class="temp-redo"></div>
+    <div class="temp-redo"></div>
+    <div class="temp-redo"></div>
+    <div class="temp-redo"></div>    
+    <!--TEMP - end-->
+
+	<!--POP UP - start-->
+    <div class="Pop-up-wrapper">
+    	<div class="close-button" onclick="Closepopup('0')"><img src="../Imgs/Source Img/Close-button.png" /></div>
+        <div class="Pop-up-name-h3">
+        	<p class="Pop-up-title">Please name the new Section (and the ordinal)</p>
+        	<textarea class="new-h3-name"></textarea>
+            <textarea class="new-h3-name"></textarea>
+            <button onclick="nameh3('0')">Confirm</button>
+        </div>
+    </div>
+    
+    <div class="Pop-up-wrapper">
+    	<div class="close-button" onclick="Closepopup('1')"><img src="../Imgs/Source Img/Close-button.png" /></div>
+        <div class="Pop-up-name-h3">
+        	<p class="Pop-up-title">Please give the ordinal of the section you want to delete</p>
+        	<textarea class="new-h3-name"></textarea>
+            <button onclick="deletegameIndex('1')">Confirm</button>
+        </div>
+    </div>  
+    
+    <div class="Pop-up-wrapper">
+    	<div class="close-button" onclick="Closepopup('2')"><img src="../Imgs/Source Img/Close-button.png" /></div>
+        <div class="Pop-up-name-h3">
+        	<p class="Pop-up-title">Please input Img's name</p>
+        	<textarea class="new-h3-name"></textarea>
+            <button onclick="addimg(2)">Confirm</button>
+        </div>
+    </div>
+    
+    <div class="Pop-up-wrapper">
+    	<div class="close-button" onclick="Closepopup('3')"><img src="../Imgs/Source Img/Close-button.png" /></div>
+        <div class="Pop-up-name-h3">
+        	<p class="Pop-up-title">Please input Game Name (and the ordinal)</p>
+        	<textarea class="new-h3-name"></textarea>
+            <textarea class="new-h3-name"></textarea>
+            <button onclick="gamenameIndex(3)">Confirm</button>
+        </div>
+    </div>  
+    
+    <!--POP UP - end-->
+
+	<!--Control Panel - start-->
+    <div class="CP">
+    	<div class="CP-items" onclick="popupnameh3(0,3)">Add</br>Game</div>
+        <div class="CP-items" onclick="popupnameh3(0,1)">Delete<br />Game</div>
+        <div class="CP-items-save" onclick="download()">Save</div>
+    </div>
+    <!--Control Panel - end-->
+    
+    
+<div class="wrapper">
+    <span class="tag">Game Design Documents</span><h2>Game list</h2>
+    <span class="content-2" id="main">
+		
+
+       
+    </span>
+</div>
+
+<script>
+
+Click();
+Countimgclass();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,156 @@
+<h3 class="h3-show" onclick="Showh3content('0')">0. Main Game</h3>
+    <h3 class="h3-hide" onclick="Closeh3content('0')">0. Main Game</h3>
+    <div class="h3-content">
+    <div class="html-yes">
+   
+    
+    <div class="h3-content-more"></div>     
+    <!--ANIM-->
+    <div class="Anim-note">
+    	<div class="Anim-note-button" onclick="Showanimnote('0')">Animation for Main Game</div>
+            <div class="Anim-note-wrapper">
+            	<div class="close-button" onclick="Closeanimnote('0')"><img src="../Imgs/Source Img/Close-button.png" /></div>
+                <div class="Anim-note-content">
+                	<h1>Animation for Main Game</h1>
+                    <h3>Idle animation</h3>
+                    	After opening the game, the Outer Roulette will be at the position where the game closed last time.<br />
+						For 1st time opening, Outer Roulette will be at Tazan symbol<br /> 
+                        <img class="gif" src="../Imgs/Game screen/Idle-Outer Roulette.gif" />
+                        Spin status will be "BET"<br />
+                        <img class="gif" src="../Imgs/Game screen/Idle-Spin status-Bet.gif" />
+                        While spining, Spin status will be "BET"<br />
+						After getting the result of Normal Spin, Spin Status will be changed to "EXTRA"<br />
+						<img class="gif" src="../Imgs/Game screen/Idle-Spin status-Extra.gif" />
+                    	In Extra spin, Spin status will be "Extra"<br />
+						After Extra spin, Spin status will be changed back to "Bet"<br />
+                   <h3>Result Step</h3>
+                   		Spin win and Roulette win have different animation<br />
+						For Spin Win<br />
+                        <img class="gif" src="../Imgs/Game screen/Spin win.gif" />
+                        For Roulette Win<br />
+						<img class="gif" src="../Imgs/Game screen/Roulette Win.gif" />
+						For Spin Win and Roulette Win at the same time<br />
+						<img class="gif" src="../Imgs/Game screen/Spin win + Roulette win.gif" />
+                   <h3>Animation of symbols</h3>
+                   		Owl<br />
+                        <img class="gif" src="../Imgs/Game screen/Owl.gif" />
+                        Monkey + Joker<br />
+                        <img class="gif" src="../Imgs/Game screen/Monkey + Joker.gif" />
+                        Sheep + Joker<br />
+                        <img class="gif" src="../Imgs/Game screen/Sheep + Joker.gif" />
+                        Tazan<br />
+                        <img class="gif" src="../Imgs/Game screen/Tazan.gif" />
+                        Tiger<br />
+                        <img class="gif" src="../Imgs/Game screen/Tiger.gif" />
+                        Wolf + Elephant<br />
+                        <img class="gif" src="../Imgs/Game screen/Wolf + elephant.gif" />
+                </div>
+            	</div>
+              </div>
+              <!--ANIM-->
+             </div>
+             <div class="html-no">
+            <textarea class="text-area-h3"></textarea>
+            <div class="h3-button" id="post-button" onclick="Post(0)">Post</div>
+            <div class="h3-button" onclick="Addmorerow(0)">Bigger input field</div>
+            <div class="h3-button" onclick="Openul(0)">Open &lt ul &gt </div>
+            <div class="h3-button" onclick="Closeul(0)">Close &lt ul &gt </div>
+            <div class="h3-button" onclick="Openli(0)">Open &lt li &gt </div>
+            <div class="h3-button" onclick="Addh4(0)">Add H4</div>
+            <div class="h3-button" onclick="popupnameh3(0,2)">Add IMG</div>
+            <div class="h3-button" onclick="Undo(0)">Undo</div>
+            <div class="h3-button" onclick="Redo(0)">Redo</div>
+            </div>
+        	
+	</div>
+    
+    
+            <div class="Game-content">
+        	<div class="Game-logo"><img src="../Imgs/Game logo/Tazan-II-logo.png" /></div>
+        	<span class="Game-name">Tazan II</span>
+            • Reference game: Bonus game of Dragon - Phoenix, Water Margin, Jungle Island<br />
+            • 2D Casino game<br />
+            • Resolution: 960 x 630 px<br /> 
+			<h3>Features: 8</h3>
+            • Main Game<br />
+			• Extra spin<br />
+            • Hold in Extra Spin<br />
+            • Supper Prize<br />
+            • Joker award<br />
+            • Extra Spotlights<br />
+            • Complex symbol<br />
+			• Bonus game<br />
+            <a href="GDD.html"><div class="Doc-button">Check Logical Document</div></a>
+            <a href="Merge Tool.html"><div class="Doc-button">Edit Tool</div></a>
+        </div>
+
+
+
+function PostIntro(x){
+	if(maxtemptext <= 9){
+	maxtemptext ++;
+	}
+	$('.temp')[temptext].innerHTML = $('.Game-intro')[x].innerHTML;
+	if(temptext < 10){ 
+	temptext ++;}
+	else{
+	temptext = 0;}
+	var Postcontent = $('.Game-intro-textarea')[x].value;
+	if(Postcontent != ""){
+	$('.Game-intro')[x].innerHTML += Postcontent + '</br>';
+	$('.temp-redo')[temptextredo].innerHTML = $('.Game-intro')[x].innerHTML;
+	if(temptextredo < 10){ 
+	temptextredo ++;}
+	else{
+	temptextredo = 0;}
+	$('.Game-intro-textarea')[x].value = "";
+	$('#undo-button').attr('style','display:block');
+	$('#redo-button').attr('style','display:block');
+	}
+	else
+	return false;
+	downloadbg();
+}
+
+
+
+function PostFeature(x){
+	if(maxtemptext <= 9){
+	maxtemptext ++;
+	}
+	$('.temp')[temptext].innerHTML = $('.Game-feature')[x].innerHTML;
+	if(temptext < 10){ 
+	temptext ++;}
+	else{
+	temptext = 0;}
+	var Postcontent = $('.Game-feature-textarea')[x].value;
+	if(Postcontent != ""){
+	$('.Game-feature')[x].innerHTML += Postcontent + '</br>';
+	$('.temp-redo')[temptextredo].innerHTML = $('.Game-feature')[x].innerHTML;
+	if(temptextredo < 10){ 
+	temptextredo ++;}
+	else{
+	temptextredo = 0;}
+	$('.Game-feature-textarea')[x].value = "";
+	$('#undo-button').attr('style','display:block');
+	$('#redo-button').attr('style','display:block');
+	}
+	else
+	return false;
+	downloadbg();
+}
+
+function deleteh3(a){
+	var x2 = $('.new-h3-name')[1].value;
+	
+	$('.Pop-up-wrapper')[a].setAttribute('style','visibility: hidden');
+ 	
+	$('.h3-show')[x2].remove();
+	$('.h3-hide')[x2].remove();
+	$('.h3-content')[x2].remove();
+	
+	counth3 = $('.h3-show').length;
+	
+	$('.new-h3-name')[1].value = "";
+	downloadbg();		
+}
